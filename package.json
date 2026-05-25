@@ -1,0 +1,45 @@
+{
+  "name": "@graysonlang/mx",
+  "version": "1.39.5",
+  "description": "Prebuilt MaterialX JavaScript/WASM shader generation runtime.",
+  "keywords": [
+    "materialx",
+    "wasm",
+    "webassembly",
+    "shadergen"
+  ],
+  "homepage": "https://github.com/graysonlang/mx#readme",
+  "bugs": {
+    "url": "https://github.com/graysonlang/mx/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graysonlang/mx.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Grayson Lang",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json",
+    "./runtime/JsMaterialXGenShader.data": "./dist/runtime/JsMaterialXGenShader.data",
+    "./runtime/JsMaterialXGenShader.js": "./dist/runtime/JsMaterialXGenShader.js",
+    "./runtime/JsMaterialXGenShader.wasm": "./dist/runtime/JsMaterialXGenShader.wasm",
+    "./runtime/metadata.json": "./dist/runtime/metadata.json"
+  },
+  "main": "index.js",
+  "files": [
+    "dist/runtime",
+    "src",
+    "materialx-source.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run build:wasm",
+    "build:wasm": "node ./scripts/build-materialx-wasm.mjs",
+    "clean": "node ./scripts/build-materialx-wasm.mjs --clean-only",
+    "prepack": "npm run verify",
+    "setup:materialx": "node ./scripts/setup-materialx.mjs",
+    "verify": "node ./scripts/verify-runtime.mjs"
+  }
+}

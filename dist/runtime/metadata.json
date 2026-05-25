@@ -1,0 +1,13 @@
+{
+  "files": [
+    "JsMaterialXGenShader.js",
+    "JsMaterialXGenShader.wasm",
+    "JsMaterialXGenShader.data"
+  ],
+  "materialxCommit": "7b64921ef1d42f2d57871e9d2c43dc11f041f26b",
+  "materialxRef": "v1.39.5",
+  "materialxRepo": "https://github.com/AcademySoftwareFoundation/MaterialX.git",
+  "materialxVersion": "1.39.5",
+  "packageName": "@graysonlang/mx",
+  "packageVersion": "1.39.5"
+}
